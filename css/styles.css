@@ -187,14 +187,22 @@ p {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 5px;
+    background: none;
+    border: none;
 }
 
 .nav-toggle .bar {
     width: 25px;
     height: 3px;
-    background-color: var(--charcoal);
+    background-color: var(--jetr-navy);
     margin: 3px 0;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-toggle:hover .bar {
+    background-color: var(--electric-blue);
 }
 
 /* Buttons */
@@ -661,10 +669,12 @@ p {
 
     .nav-toggle.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
+        background-color: var(--jetr-navy);
     }
 
     .nav-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+        background-color: var(--jetr-navy);
     }
 
     /* Typography */
@@ -786,6 +796,11 @@ p {
 /* Focus States for Accessibility */
 .nav-link:focus,
 .btn:focus {
+    outline: 2px solid var(--electric-blue);
+    outline-offset: 2px;
+}
+
+.nav-toggle:focus {
     outline: 2px solid var(--electric-blue);
     outline-offset: 2px;
 }
