@@ -183,26 +183,42 @@ p {
     width: 100%;
 }
 
+/* Hamburger Menu - Fixed to be visible */
 .nav-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    padding: 5px;
+    padding: 8px;
     background: none;
     border: none;
+    z-index: 1001;
 }
 
 .nav-toggle .bar {
     width: 25px;
     height: 3px;
-    background-color: var(--jetr-navy);
+    background-color: #1B365D !important; /* Force navy color */
     margin: 3px 0;
     transition: all 0.3s ease;
     border-radius: 2px;
 }
 
 .nav-toggle:hover .bar {
-    background-color: var(--electric-blue);
+    background-color: #00D4FF !important; /* Force blue on hover */
+}
+
+.nav-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: #1B365D !important;
+}
+
+.nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: #1B365D !important;
 }
 
 /* Buttons */
@@ -661,20 +677,6 @@ p {
 
     .nav-toggle {
         display: flex;
-    }
-
-    .nav-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-toggle.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-        background-color: var(--jetr-navy);
-    }
-
-    .nav-toggle.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-        background-color: var(--jetr-navy);
     }
 
     /* Typography */
