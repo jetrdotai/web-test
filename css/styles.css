@@ -825,13 +825,17 @@ p {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-    
-    
-/* Emergency hamburger fix - add this at the very end */
+}
+
+/* DEBUGGING - Add this at the very end of your CSS file */
+.nav-toggle .bar {
+    background: red !important;
+    background-color: red !important;
+}
+
 @media (max-width: 768px) {
     .nav-toggle .bar {
-        background: #1B365D !important;
-        background-color: #1B365D !important;
+        background: red !important;
+        background-color: red !important;
     }
-}
 }
