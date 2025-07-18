@@ -183,7 +183,7 @@ p {
     width: 100%;
 }
 
-/* Hamburger Menu - Fixed to be visible */
+/* Hamburger Menu - More aggressive fix */
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -195,30 +195,41 @@ p {
 }
 
 .nav-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #1B365D !important; /* Force navy color */
-    margin: 3px 0;
-    transition: all 0.3s ease;
-    border-radius: 2px;
+    width: 25px !important;
+    height: 3px !important;
+    background: #1B365D !important;
+    background-color: #1B365D !important;
+    margin: 3px 0 !important;
+    transition: all 0.3s ease !important;
+    border-radius: 2px !important;
+    border: none !important;
 }
 
 .nav-toggle:hover .bar {
-    background-color: #00D4FF !important; /* Force blue on hover */
+    background: #00D4FF !important;
+    background-color: #00D4FF !important;
 }
 
 .nav-toggle.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg) !important;
+    background: #1B365D !important;
     background-color: #1B365D !important;
 }
 
 .nav-toggle.active .bar:nth-child(2) {
-    opacity: 0;
+    opacity: 0 !important;
 }
 
 .nav-toggle.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg) !important;
+    background: #1B365D !important;
     background-color: #1B365D !important;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex !important;
+    }
 }
 
 /* Buttons */
@@ -814,4 +825,13 @@ p {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+    
+    
+/* Emergency hamburger fix - add this at the very end */
+@media (max-width: 768px) {
+    .nav-toggle .bar {
+        background: #1B365D !important;
+        background-color: #1B365D !important;
+    }
+}
 }
