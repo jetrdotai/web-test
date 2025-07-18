@@ -80,21 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
     stats.forEach((stat, index) => {
         stat.style.animationDelay = `${index * 0.2}s`;
     });
-});
 
-// Global function for "Get a Demo" button
-function scrollToDemo() {
-    const target = document.getElementById('for-individuals');
-    if (target) {
-        target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }
-}
-
-// Add some interactive features
-document.addEventListener('DOMContentLoaded', function() {
     // Add hover effect to bars in demo chart
     const bars = document.querySelectorAll('.bar');
     bars.forEach(bar => {
@@ -127,4 +113,15 @@ document.addEventListener('DOMContentLoaded', function() {
         // Start typing effect after page load
         setTimeout(typeWriter, 1000);
     }
+
+    // Add smooth scroll behavior for email links
+    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Add a subtle animation to the clicked button
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+        });
+    });
 });

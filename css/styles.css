@@ -310,6 +310,30 @@ p {
     animation: pulse 4s ease-in-out infinite;
 }
 
+/* Icon Placeholder Styles */
+.feature-icon-placeholder {
+    width: 48px;
+    height: 48px;
+    background-color: var(--soft-gray);
+    border: 2px solid var(--electric-blue);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--medium-gray);
+    margin-bottom: var(--spacing-sm);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon-placeholder,
+.feature-box:hover .feature-icon-placeholder {
+    background-color: var(--electric-blue);
+    color: var(--pure-white);
+    transform: scale(1.1);
+}
+
 /* For Individuals Section */
 .individuals-content {
     max-width: 100%;
@@ -392,11 +416,6 @@ p {
     box-shadow: var(--shadow-lg);
 }
 
-.feature-icon {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-sm);
-}
-
 .feature-card h3 {
     color: var(--jetr-navy);
     margin-bottom: var(--spacing-xs);
@@ -449,11 +468,6 @@ p {
 .feature-box:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
-}
-
-.feature-box .feature-icon {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-sm);
 }
 
 .feature-box h4 {
@@ -679,6 +693,13 @@ p {
         height: 200px;
     }
 
+    /* Icon placeholders */
+    .feature-icon-placeholder {
+        width: 40px;
+        height: 40px;
+        font-size: 0.7rem;
+    }
+
     /* Sections */
     .demo-container {
         grid-template-columns: 1fr;
@@ -744,6 +765,13 @@ p {
 
     .hero-subtitle {
         font-size: 1.125rem;
+    }
+
+    /* Icon placeholders */
+    .feature-icon-placeholder {
+        width: 36px;
+        height: 36px;
+        font-size: 0.65rem;
     }
 
     .about-stats {
